@@ -4,7 +4,7 @@
   "description": "Personal Claude Code configuration installer — skills, agents, rules, hooks",
   "type": "module",
   "bin": {
-    "bclaude": "./bin/cli.js"
+    "bclaude": "bin/cli.js"
   },
   "files": [
     "bin/",
