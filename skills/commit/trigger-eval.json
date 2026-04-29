@@ -1,0 +1,14 @@
+{
+  "skill_name": "commit",
+  "queries": [
+    {"prompt": "幫我 commit", "should_trigger": true},
+    {"prompt": "看我改了什麼然後 commit", "should_trigger": true},
+    {"prompt": "自動 commit 我的變更", "should_trigger": true},
+    {"prompt": "commit my changes", "should_trigger": true},
+    {"prompt": "我改了幾個檔案，幫我整理一下 commit message", "should_trigger": true},
+    {"prompt": "幫我寫一個 Python function", "should_trigger": false},
+    {"prompt": "解釋這段程式碼", "should_trigger": false},
+    {"prompt": "幫我 push 到 GitHub", "should_trigger": false},
+    {"prompt": "這個 bug 怎麼修", "should_trigger": false}
+  ]
+}

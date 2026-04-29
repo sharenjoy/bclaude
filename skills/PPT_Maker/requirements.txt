@@ -1,0 +1,11 @@
+# PPT Maker - Python 依賴
+# 安裝方式：pip install -r requirements.txt
+
+# 圖片處理
+Pillow>=10.0.0
+
+# PPTX 生成
+python-pptx>=0.6.21
+
+# API 呼叫
+requests>=2.31.0

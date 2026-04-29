@@ -1,0 +1,54 @@
+{
+  "general": [
+    "commit",
+    "deploy",
+    "dbs-framework",
+    "find-skills",
+    "session-todo",
+    "llm-wiki"
+  ],
+  "laravel": [
+    "commit",
+    "deploy",
+    "dbs-framework",
+    "find-skills",
+    "session-todo",
+    "composer-update",
+    "llm-wiki"
+  ],
+  "fullstack": [
+    "commit",
+    "deploy",
+    "dbs-framework",
+    "find-skills",
+    "session-todo",
+    "firecrawl-scraper",
+    "llm-wiki",
+    "skill-iteration-loop"
+  ],
+  "content": [
+    "commit",
+    "dbs-framework",
+    "find-skills",
+    "yt-analyze",
+    "llm-wiki",
+    "Social_Media_Post",
+    "PPT_Maker"
+  ],
+  "all": [
+    "commit",
+    "deploy",
+    "dbs-framework",
+    "find-skills",
+    "add-agent",
+    "session-todo",
+    "skill-iteration-loop",
+    "llm-wiki",
+    "firecrawl-scraper",
+    "composer-update",
+    "yt-analyze",
+    "Data_Insight",
+    "PPT_Maker",
+    "Social_Media_Post"
+  ]
+}

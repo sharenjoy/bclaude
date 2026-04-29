@@ -1,0 +1,86 @@
+{
+  "commit": {
+    "description": "自動分析 diff、撰寫 Conventional Commits 並提交",
+    "tags": ["git", "general"],
+    "defaultSelected": true,
+    "postInstall": null
+  },
+  "deploy": {
+    "description": "全自動 git deploy：branch → commit → PR/MR → merge → 清除",
+    "tags": ["git", "general"],
+    "defaultSelected": true,
+    "postInstall": null
+  },
+  "dbs-framework": {
+    "description": "建立新 skill 的 DBS 結構指南",
+    "tags": ["meta", "general"],
+    "defaultSelected": true,
+    "postInstall": null
+  },
+  "find-skills": {
+    "description": "幫助發現與安裝 agent skills",
+    "tags": ["meta", "general"],
+    "defaultSelected": true,
+    "postInstall": null
+  },
+  "add-agent": {
+    "description": "新增 subagent 並同步更新 AGENTS.md 與 CLAUDE.md",
+    "tags": ["meta", "general"],
+    "defaultSelected": false,
+    "postInstall": null
+  },
+  "session-todo": {
+    "description": "工作 session 任務管理，開工/收工建立 todo 清單",
+    "tags": ["productivity", "general"],
+    "defaultSelected": false,
+    "postInstall": null
+  },
+  "skill-iteration-loop": {
+    "description": "Binary Eval + AutoResearch 迭代優化 skill",
+    "tags": ["meta", "advanced"],
+    "defaultSelected": false,
+    "postInstall": null
+  },
+  "llm-wiki": {
+    "description": "將 URL/YouTube/貼文分析後寫入 llm-wiki 知識庫",
+    "tags": ["productivity", "general"],
+    "defaultSelected": false,
+    "postInstall": null
+  },
+  "firecrawl-scraper": {
+    "description": "使用 Firecrawl API 爬取網站資料",
+    "tags": ["scraping", "fullstack"],
+    "defaultSelected": false,
+    "postInstall": null
+  },
+  "composer-update": {
+    "description": "Laravel composer update 完整流程",
+    "tags": ["laravel"],
+    "defaultSelected": false,
+    "postInstall": null
+  },
+  "yt-analyze": {
+    "description": "YouTube 影片深度分析系統",
+    "tags": ["productivity", "media"],
+    "defaultSelected": false,
+    "postInstall": null
+  },
+  "Data_Insight": {
+    "description": "數據洞察分析，支援 Excel/PDF/Word/CSV",
+    "tags": ["data", "analysis"],
+    "defaultSelected": false,
+    "postInstall": "cd ~/.claude/skills/Data_Insight && pip install -r requirements.txt"
+  },
+  "PPT_Maker": {
+    "description": "企業級簡報生成，選擇風格、批量輸出 PPT",
+    "tags": ["productivity", "presentation"],
+    "defaultSelected": false,
+    "postInstall": "cd ~/.claude/skills/PPT_Maker && pip install -r requirements.txt"
+  },
+  "Social_Media_Post": {
+    "description": "生成 Facebook/Threads/X/LinkedIn 優化社群貼文",
+    "tags": ["social", "content"],
+    "defaultSelected": false,
+    "postInstall": null
+  }
+}

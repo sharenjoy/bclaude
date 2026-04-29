@@ -1,0 +1,67 @@
+{
+    "hooks": {
+        "Notification": [
+            {
+                "hooks": [
+                    {
+                        "type": "command",
+                        "command": "afplay /System/Library/Sounds/Ping.aiff 2>/dev/null; osascript -e 'display notification \"需要您的回覆\" with title \"Claude Code\" sound name \"Ping\"' 2>/dev/null; /opt/homebrew/bin/terminal-notifier -message \"${CLAUDE_NOTIFICATION:-需要您的回覆}\" -title \"Claude Code\" -subtitle \"等待中\" -sound default 2>/dev/null; true"
+                    }
+                ]
+            }
+        ],
+        "Stop": [
+            {
+                "hooks": [
+                    {
+                        "type": "command",
+                        "command": "bash /Users/ronald/.claude/scripts/notify_when_idle.sh"
+                    }
+                ]
+            }
+        ],
+        "PreToolUse": [
+            {
+                "matcher": "AskUserQuestion",
+                "hooks": [
+                    {
+                        "type": "command",
+                        "command": "bash /Users/ronald/.claude/scripts/notify_when_idle.sh ask"
+                    }
+                ]
+            }
+        ],
+        "PostToolUse": [
+            {
+                "matcher": "Write|Edit",
+                "hooks": [
+                    {
+                        "type": "command",
+                        "command": "bash -c 'FILE=$(jq -r \".tool_input.file_path // \\\"\\\"\" 2>/dev/null); echo \"$FILE\" | grep -qE \"/\\.claude/(agents/[^/]+\\.md|skills/[^/]+/SKILL\\.md|rules/[^/]+\\.md|settings\\.json|CLAUDE\\.md)$\" && python3 ~/.claude/scripts/update_usage.py 2>/dev/null || true'"
+                    },
+                    {
+                        "type": "command",
+                        "command": "bash -c 'FILE=$(jq -r \".tool_input.file_path // \\\"\\\"\" 2>/dev/null); echo \"$FILE\" | grep -qE \"/\\.claude/(skills/|agents/|rules/|scripts/)\" && node /Users/ronald/AI/Projects/claude-boilerplate/bin/sync.js >> /tmp/claude-boilerplate-sync.log 2>&1 & true'"
+                    }
+                ]
+            }
+        ]
+    },
+    "permissions": {
+        "allow": [
+            "Bash(git add:*)",
+            "Bash(git commit:*)",
+            "Bash(php artisan:*)",
+            "Bash(npm run:*)",
+            "Bash(composer:*)",
+            "WebSearch",
+            "WebFetch"
+        ],
+        "deny": [
+            "Bash(git push:*)",
+            "Bash(rm -rf:*)",
+            "Bash(php artisan db:wipe:*)",
+            "Bash(sudo *)"
+        ]
+    }
+}

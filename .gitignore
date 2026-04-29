@@ -1,0 +1,10 @@
+node_modules/
+skills/Data_Insight/venv/
+skills/Data_Insight/outputs/
+skills/Data_Insight/uploads/
+skills/PPT_Maker/venv/
+skills/*/evals/__pycache__/
+skills/*/scripts/__pycache__/
+**/__pycache__/
+**/*.pyc
+**/.DS_Store

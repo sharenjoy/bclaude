@@ -1,0 +1,11 @@
+{
+  "best_description": "Automatically reads git diff, groups changes, writes Conventional Commits formatted message(s), stages files, and commits — all without user intervention. Invoked manually via /commit in Claude Code. Also triggers when the user asks to \"commit my changes\", \"幫我 commit\", \"自動 commit\", \"看我改了什麼然後 commit\", or any variation of wanting to commit their current git changes.",
+  "best_score": 1.0,
+  "history": [
+    {
+      "iteration": 1,
+      "score": 1.0,
+      "description": "Automatically reads git diff, groups changes, writes Conventional Commits formatted message(s), stages files, and commits — all without user intervention. Invoked manually via /commit in Claude Code. Also triggers when the user asks to \"commit my changes\", \"幫我 commit\", \"自動 commit\", \"看我改了什麼然後 commit\", or any variation of wanting to commit their current git changes."
+    }
+  ]
+}
