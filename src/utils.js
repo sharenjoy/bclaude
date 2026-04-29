@@ -15,7 +15,7 @@ export function pkgRoot() {
 }
 
 export function claudeDir() {
-  return join(process.env.HOME || process.env.USERPROFILE, '.claude');
+  return join(process.cwd(), '.claude');
 }
 
 export function skillsRegistry() {

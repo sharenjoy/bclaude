@@ -43,7 +43,7 @@ export async function install(opts) {
     console.log(chalk.yellow('\n[DRY RUN] — nothing will be written\n'));
   }
 
-  console.log(chalk.bold('\nClaude Boilerplate Installer'));
+  console.log(chalk.bold('\nbclaude Installer'));
   console.log(chalk.dim(`→ Destination: ${dest}\n`));
 
   const spinner = ora();
