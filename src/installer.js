@@ -8,8 +8,9 @@ import { pkgRoot, claudeDir, skillsRegistry, profiles } from './utils.js';
 
 const EXCLUDE_PATTERNS = ['venv', '__pycache__', 'node_modules', 'outputs', 'uploads', '.DS_Store'];
 
-function shouldExclude(src) {
-  return EXCLUDE_PATTERNS.some(p => src.includes(`/${p}`));
+function shouldExclude(src, root) {
+  const relative = src.slice(root.length);
+  return EXCLUDE_PATTERNS.some(p => relative.includes(`/${p}`));
 }
 
 export async function install(opts) {
@@ -74,7 +75,7 @@ export async function install(opts) {
   if (!dryRun) {
     copySync(join(src, 'agents'), join(dest, 'agents'), {
       overwrite: force,
-      filter: p => !shouldExclude(p),
+      filter: p => !shouldExclude(p, src),
     });
   }
   spinner.succeed(chalk.green('agents/ (all)'));
@@ -84,7 +85,7 @@ export async function install(opts) {
   if (!dryRun) {
     copySync(join(src, 'rules'), join(dest, 'rules'), {
       overwrite: force,
-      filter: p => !shouldExclude(p),
+      filter: p => !shouldExclude(p, src),
     });
   }
   spinner.succeed(chalk.green('rules/'));
@@ -113,7 +114,7 @@ export async function install(opts) {
         }
         copySync(skillSrc, skillDest, {
           overwrite: force,
-          filter: p => !shouldExclude(p),
+          filter: p => !shouldExclude(p, src),
         });
       }
       spinner.succeed(chalk.green(`  ${name}`) + chalk.dim(` — ${meta?.description ?? ''}`));
