@@ -66,5 +66,5 @@ export async function runInteractive(baseOpts) {
     },
   ]);
 
-  await install({ skills: skillNames.join(','), dryRun: false, force, ...baseOpts });
+  await install({ ...baseOpts, skills: skillNames.join(','), dryRun: false, force });
 }
