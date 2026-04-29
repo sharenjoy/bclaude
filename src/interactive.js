@@ -7,7 +7,7 @@ export async function runInteractive(baseOpts) {
   const registry = skillsRegistry();
   const allProfiles = profiles();
 
-  console.log(chalk.bold('\nClaude Boilerplate Installer'));
+  console.log(chalk.bold('\nbclaude Installer'));
   console.log(chalk.dim('Interactive setup\n'));
 
   const { mode } = await inquirer.prompt([
@@ -57,13 +57,7 @@ export async function runInteractive(baseOpts) {
     skillNames = selected;
   }
 
-  const { force, dryRun } = await inquirer.prompt([
-    {
-      type: 'confirm',
-      name: 'dryRun',
-      message: 'Dry run（預覽，不實際寫入）?',
-      default: false,
-    },
+  const { force } = await inquirer.prompt([
     {
       type: 'confirm',
       name: 'force',
@@ -72,5 +66,5 @@ export async function runInteractive(baseOpts) {
     },
   ]);
 
-  await install({ skills: skillNames.join(','), dryRun, force, ...baseOpts });
+  await install({ skills: skillNames.join(','), dryRun: false, force, ...baseOpts });
 }
