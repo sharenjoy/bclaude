@@ -157,7 +157,7 @@ Skills 需要**手動觸發**（`/skill-name` 或描述觸發關鍵詞）。
 | `deploy` | Automates the full git deploy flow end-to-end with… |
 | `find-skills` | Helps users discover and install agent skills when… |
 | `firecrawl-scraper` | 使用 Firecrawl API 爬取網站資料的技能 |
-| `LLM Wiki` | 將資源寫入 llm-wiki 知識庫 |
+| `llm-wiki` | 將資源寫入 llm-wiki 知識庫 |
 | `session-todo` | 工作 session 任務管理系統 |
 | `skill-iteration-loop` | 使用 AutoResearch + Binary Eval 迭代改進 Skill 的完整流程指南 |
 | `YT Analyze` | YouTube 影片深度分析系統入口 |

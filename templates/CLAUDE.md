@@ -74,7 +74,7 @@ skills/<skill-name>/
 | `Social_Media_Post`      | 生成 Facebook、Threads、X、LinkedIn 優化社群貼文                                                |
 | `deploy`                 | 全自動 git deploy：建立 branch、拆分 commit、建立 PR/MR、auto-merge、清除 branch（支援 GitHub/GitLab） |
 | `composer-update`        | Laravel 專案 composer update 完整流程：更新套件 → boost:update → 偵測新套件 → 更新 CLAUDE.md          |
-| `llm-wiki`               | 將 URL、Facebook 貼文、YouTube 影片分析後寫入 `~/AI/llm-wiki/raw/articles/`                           |
+| `llm-wiki`               | 將 URL、Facebook 貼文、YouTube 影片、本地資源檔案（PDF/圖檔/PPT）寫入 `~/AI/llm-wiki/raw/`；說「讀取資源目錄」可列出 `assets/` 最近檔案 |
 | `add-agent`              | 新增 subagent 並自動同步更新 `AGENTS.md` 與 `CLAUDE.md`                                                |
 | `session-todo`           | 工作 session 任務管理：開工建立 `todo/YYYY-MM-DD_HH-MM.md`、收工標記完成、支援 PRD 討論後續任務       |
 
