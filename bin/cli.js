@@ -10,7 +10,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const pkg = JSON.parse(readFileSync(join(__dirname, '../package.json'), 'utf8'));
 
 program
-  .name('claude-boilerplate')
+  .name('bclaude')
   .description('Install personal Claude Code configuration — skills, agents, rules, hooks')
   .version(pkg.version)
   .option('-s, --skills <list>', 'comma-separated skill names (e.g. commit,deploy)')

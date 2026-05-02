@@ -53,7 +53,7 @@ function syncDir(srcPath, destPath, excludes) {
 
 // ── 主流程 ──────────────────────────────────────────────────
 
-console.log('Syncing ~/.claude → claude-boilerplate\n');
+console.log('Syncing ~/.claude → bclaude\n');
 let totalChanges = 0;
 
 for (const { src, dest, excludes } of SYNC_TARGETS) {

@@ -155,7 +155,6 @@ Skills 需要**手動觸發**（`/skill-name` 或描述觸發關鍵詞）。
 | `composer-update` | 在 Laravel 專案中執行完整的 composer update 流程 |
 | `dbs-framework` | Use this skill whenever the user wants to create a… |
 | `deploy` | Automates the full git deploy flow end-to-end with… |
-| `find-skills` | Helps users discover and install agent skills when… |
 | `firecrawl-scraper` | 使用 Firecrawl API 爬取網站資料的技能 |
 | `llm-wiki` | 將資源寫入 llm-wiki 知識庫 |
 | `session-todo` | 工作 session 任務管理系統 |
@@ -184,7 +183,7 @@ Agents 由 Claude **自動委派**（也可明確指定）。每個 agent 有獨
 | `code-reviewer` | Read, Grep, Glob | 🔒 Read-Only | 20 |
 | `debugger` | Read, Grep, Glob, Bash | ⚡ +Bash | 30 |
 | `doc-writer` | Read, Write, Edit, Grep, Glob | 📝 +Write | 20 |
-| `frontend-tester` | Bash, Read, Grep, Glob | ⚡ +Bash | 30 |
+| `frontend-tester` | Bash, Read, Write, Edit, Grep, Glob | ⚡ +Bash | 30 |
 | `refactorer` | Read, Write, Edit, Grep, Glob | 📝 +Write | 25 |
 | `requirements-planner` | Read, Write, Edit, Grep, Glob | 📝 +Write | 25 |
 | `security-auditor` | Read, Grep, Glob | 🔒 Read-Only | 20 |
@@ -215,6 +214,8 @@ Agents 由 Claude **自動委派**（也可明確指定）。每個 agent 有獨
 | Claude 需要回應（Notification） | command |
 | Claude 完成任務（Stop） | command |
 | 工具執行前（PreToolUse） | command（matcher: AskUserQuestion） |
+| 工具執行前（PreToolUse） | command（matcher: Edit|Write） |
+| PermissionRequest | command（matcher: Bash） |
 | 工具執行後（PostToolUse） | command（matcher: Write|Edit） |
 | 工具執行後（PostToolUse） | command（matcher: Write|Edit） |
 <!-- AUTO:HOOKS_END -->
