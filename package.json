@@ -1,6 +1,6 @@
 {
   "name": "bclaude",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "Personal Claude Code configuration installer — skills, agents, rules, hooks",
   "type": "module",
   "bin": {
